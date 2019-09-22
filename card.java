@@ -21,7 +21,7 @@ class Card {
 	}
 
 	//need to map integers over 10 to J,Q,K,A 
-
+        //need to edit this class below functionality wont hold unless tostring is overridden
 	public String stringCombiner(){
 
 		StringBuilder cardName = new StringBuilder()long
