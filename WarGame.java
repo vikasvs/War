@@ -9,7 +9,16 @@ public class WarGame {
 				deck.add(new card(x,y));
 			}
 		}
+		LinkedList<card> player1_deck = new LinkedList<>();
+		LinkedList<card> player2_deck = new LinkedList<>();
 
+		player1_deck.addAll(deck.sublist(0,25));
+		player2_deck.addAll(deck.sublist(26, cardDeck.size()));
+
+		p1_card = player1_deck.pop();
+		p2_card = player2_deck.pop();
+		System.out.println("Player 1's has the " + p1_card);
+		System.out.println("Player 1's has the " + player);
 		/**
 		Logic
 		create 2 decks for each player
