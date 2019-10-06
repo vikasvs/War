@@ -1,6 +1,4 @@
 # War
-what is is good for ABSOLUTELY NOTHING
-
 
 Language: Java
 
