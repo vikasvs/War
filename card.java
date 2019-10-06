@@ -2,15 +2,16 @@ class Card {
 	private int rank;
 	private int suit;
 
+
+	//define a card constructor as well as geter and setter methods for ranks and suits
 	public card(int suit, int rank){
 		this.suit = suit;
 		this.rank = rank;
 	}
-
 	public int getRank(){
 		return rank;
 	}
-	public int setrank(int rank){
+	public int setRank(int rank){
 		this.rank = rank;
 	}
 	public int getSuit(){
@@ -20,8 +21,7 @@ class Card {
 		this.suit = suit;
 	}
 
-	//need to map integers over 10 to J,Q,K,A 
-        //need to edit this class below functionality wont hold unless tostring is overridden
+	//create a tostring function that converts numbers to strings
 	public String stringCombiner(){
 
 		StringBuilder cardName = new StringBuilder()long
@@ -60,7 +60,6 @@ class Card {
 				break;
 			}
 		}
-
 		return cardName.stringCombiner();
 	}
 
