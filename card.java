@@ -1,4 +1,4 @@
-class Card { 
+class card {
 	private int rank;
 	private int suit;
 
@@ -11,56 +11,62 @@ class Card {
 	public int getRank(){
 		return rank;
 	}
-	public int setRank(int rank){
+	public void setRank(int rank){
 		this.rank = rank;
 	}
 	public int getSuit(){
 		return suit;
 	}
-	public int setSuit(int suit){
+	public void setSuit(int suit){
 		this.suit = suit;
 	}
 
-	//create a tostring function that converts numbers to strings
-	public String stringCombiner(){
+	//create a  function that converts numbers to strings
 
-		StringBuilder cardName = new StringBuilder()long
 
-		numberToRank(rank){
-			if (rank = 11){
-				cardName.append("Jack");
-			}
-			if (rank = 12){
-				cardName.append("Queen");
-			}
-			if (rank = 13){
-				cardName.append("King");
-			}
-			if (rank = 14){
-				cardName.append("Ace");
-			} 
-			else {
-				cardName.append(rank);
-			}
+	public void numberToRank(int arank, StringBuilder cardname){
+		if (rank == 11){
+			cardname.append("Jack");
 		}
-
-		numberToSuit(suit){
-			if (suit = 0){
-				cardName.append("Clubs")
-			}
-			if (suit = 1){
-				cardName.append("Diamonds")
-			}
-			if (suit = 2){
-				cardName.append("Hearts")
-			}
-			if (suit = 3){
-				cardName.append("Spades")
-			} else {
-				break;
-			}
+		if (rank == 12){
+			cardname.append("Queen");
 		}
-		return cardName.stringCombiner();
+		if (rank == 13){
+			cardname.append("King");
+		}
+		if (rank == 14){
+			cardname.append("Ace");
+		}
+		else {
+			cardname.append(rank);
+		}
+	}
+
+	public void numberToSuit(int asuit, StringBuilder cardname) {
+		if (suit == 0) {
+			cardname.append("Clubs");
+		}
+		if (suit == 1) {
+			cardname.append("Diamonds");
+		}
+		if (suit == 2) {
+			cardname.append("Hearts");
+		}
+		if (suit == 3) {
+			cardname.append("Spades");
+		}
+	}
+
+
+	public StringBuilder stringCombiner(card newCard){
+
+		StringBuilder cardName = new StringBuilder();
+		int currRank = newCard.getRank();
+		int currSuit = newCard.getSuit();
+
+		numberToRank(currRank, cardName);
+		numberToSuit(currSuit, cardName);
+		return cardName;
 	}
 
 
